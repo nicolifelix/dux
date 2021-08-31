@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin btn-default($color-default){
+    // display: block;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 40px;
+    cursor: pointer;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    border: 1px solid $color-default;
+    background: $color-default;
+    color: #fff;
+    @media(max-width: 767px){
+        font-size: 0.8rem;
+        padding: 10px 20px;
+        
+    }
+    &:hover{
+        border: 1px solid $color-default;
+        border-radius: 30px;
+        background-color: #fff;
+        color: $color-default;
+        text-decoration: none;
+    }   
+
+    @content;  
+    }
+
+@mixin btn-highlight($color-default){  
+    @include btn-default($color-default);
+    border: 1px solid $color-default;
+    background-color: transparent;
+    color: $color-default;    
+    &:hover{
+        border: 1px solid $color-default;
+        border-radius: 30px;
+        background-color: $color-default;
+        color: #fff;
+        text-decoration: none;    }   
+    @content;
+}
+
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+
+@mixin setColor($color) {
+    color: $color;
+} 
+
+@mixin backGround($color) {
+    background-color: $color;
+}
+
+@mixin setColorStrong($color) {
+    color: $color;
+} 
+
+@mixin backGroundStrong($color) {
+    background-color: $color;
+}

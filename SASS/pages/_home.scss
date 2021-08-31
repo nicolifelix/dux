@@ -1,0 +1,301 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+@mixin color-default($color) {
+    $color: $color;
+}
+@mixin color-strong($color) {
+    $color: $color;
+}
+.lpColor{
+    &--blue{
+        @include color-default($blueColor);
+        @include color-strong($blueColorStrong)
+        
+    }
+
+    // &--pink{
+    //     @include color-default($pinkColor);
+    //     @include color-strong($pinkColorStrong)
+    // }
+} 
+
+.roww .coll {
+    height: 100px;
+    background: green;
+}
+
+
+.duxSection-banner{
+    margin-bottom: 0;
+    .duxElement-image-banner{
+        position: relative;
+        img{
+            width: 100%;
+            @media (max-width:768px) {
+                width: 100%;
+                height: 50vh;
+                object-fit: cover;
+            }
+        }
+    }
+    .sup-itens-banner{
+        position: absolute;
+        // bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 0 30px;
+        left: 45px;
+        top: 130px;
+
+        @media (max-width:768px) {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 65%;
+            padding: 10px 25px;
+            top: 10px;
+            left: -25px;
+        }
+    }
+    .sup-text{
+        .banner-title-default{
+            @include setColor ($blueColorStrong );
+            text-align: left;
+            font-size:  rem(64px);
+            // font-size: 3rem;   
+            margin-bottom: 0;
+            font-weight: 400;
+            
+            @media (max-width:768px) {
+                font-size: 1.5rem;
+            }
+
+            .banner-title-strong{
+                @include setColor ($blueColorStrong);
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+
+.duxSection-budget{
+    background-color: #f2f2f2;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 30px;
+
+}
+.budget-desc{
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 30px;
+    @include setColor ($blueColorStrong );
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    @media(max-width: 767px){
+        width: 100%;
+    }
+    .budget-highlight{
+        margin-top: 15px;
+        p{
+            font-weight: bold;
+        }
+    }
+}
+
+.duxSection-differences{
+    // padding: 3% 23%;
+   
+    img{
+        width: 100px;
+        margin-bottom: 30px;
+    }
+    
+    
+    .item-diferences{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p{
+            text-align: center;
+        }
+    }
+}
+
+.duxSection-certf{
+    background-color: #f2f2f2;
+    text-align: center;
+    .item-certif{
+        border: solid 1px $blueColor;
+        border-radius: 50%;
+        margin: 30px auto;
+        width: 180px;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 130px;
+        }
+        @media (max-width:768px) {
+            width: 120px;
+            height: 120px;
+            margin: 45px 10px;
+            img{
+                width: 90px;
+            }
+        }
+    }
+}
+
+.duxSection-produts{
+    
+    text-align: center;
+    img{
+        width: 600px;
+        margin: 30px 0;
+    }
+}
+.cta-default{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;    
+    letter-spacing: 1px;
+    background: rgb(10,71,146);
+    background: linear-gradient(87deg, $blueColorStrong, $blueColor 46%, $blueColor 100%);    
+    color: #fff;
+    width: 40%;
+    margin: 60px auto;
+    text-transform: uppercase;
+    box-shadow: 0 15px 15px 5px #ccc;
+    a{
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+    &:hover{
+        background: linear-gradient(87deg, $blueColorStrong, $blueColorStrong 46%, $blueColorStrong 100%);    
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    @media(max-width: 767px){
+        font-size: 0.8rem;
+        padding: 10px 20px;
+        width: 100%;
+        pointer-events: none !important;
+        &:hover{
+            pointer-events: none !important;
+        }
+        a{
+            font-size: 1.3rem;
+            pointer-events: none !important;
+        }
+        
+    }
+}
+
+
+.banner-title-weak{
+    @include setColor ($blueColor);
+    text-align: left;
+    font-size: 28px;
+    font-weight: 500;
+    @media (max-width:768px) {
+        font-size: 1rem;
+    }
+}
+
+footer{
+    text-align: center;
+    img{
+       max-width:100%;
+        margin-bottom: 30px;
+    }
+    p{
+        text-transform: uppercase;
+        color: #00537f;
+        font-size: 12px;
+    }
+}
+
+
+p{
+    @include setColor ($blueColorStrong );
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+}
+h1{
+    @include setColor ($blueColorStrong );
+    text-align: center;
+    font-weight: 800;
+}
+.title-doted{
+    @include setColor ($blueColor );
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    @media (max-width:768px) {
+        font-size: 2rem;
+    }
+    &:before{
+        content: '•';
+        color: $blueColorStrong;
+        font-size: 3rem;
+    }
+    &:after{
+        content: '•';
+        color: $blueColor;
+        font-size: 3rem;
+        
+    }
+}
+
+.w-20 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20% !important;
+        flex: 0 0 20% !important;
+        max-width: 20%;
+    
+        @media (max-width:992px) {
+            flex: 0 0 50% !important;
+            max-width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:last-child {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+
+.hackzinho{
+    @media (max-width:992px) {
+        &:last-child {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
