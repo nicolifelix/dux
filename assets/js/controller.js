@@ -16,10 +16,19 @@ var Controller = {
         Util.aosEfect();
     },
 
+
+    
+
 };
 
 jQuery(document).ready(function ($) {
     Controller.global();
 });
 
+
+
+
+
 (console.info || console.log).call(console, "%c<Dev by 🧪 LAB2B Team/>", "color: MediumVioletRed ; font-weight: bold;");
+
+
