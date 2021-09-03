@@ -4,7 +4,6 @@
  */
 
 var Util = {
-
     corousel: function(){
         var swiper = new Swiper(".lpDuxSwiper",{ 
             slidesPerView: 'auto',
@@ -23,14 +22,5 @@ var Util = {
 
         AOS.init();
     },
-
-
 }
 
-jQuery('.testimonial-carousel').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    });

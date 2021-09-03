@@ -2,6 +2,11 @@
     section{
         margin-bottom: 0;
     }
+    .pxT-60{
+        @media (max-width:768px) {
+            padding: 15px 0;
+        }
+    }
 }
 .content-left{
     display: flex;
@@ -16,16 +21,33 @@
     @media (max-width:768px) {
         justify-content: center;
     }
+}
+.duxElement-image-banner{
+    h1{
+        @media (max-width:768px) {
+            font-size: 1rem;
+        }
+    }
     .sup-itens-banner{
        left: auto;
+       @media (max-width:768px) {
+        width: 85%;
+        margin-left: 25%;
+        }
     }
     .banner-title-normal{
         color: $blueColor;
         font-size: 1.750rem;
+        @media (max-width:768px) {
+            font-size: 1.250rem;
+        }
     }
     .other{
         color: $greyColor;
         font-size: 1.250rem;
+        @media (max-width:768px) {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -42,13 +64,6 @@
     .video, .img{
         padding: 60px;
     }
-    .budget-bottom{
-        .budget-bottom-item{
-            .budget-bottom-img{
-                width: 20%;
-            }
-        }
-    }
 }
 
 //duxSection-differences
@@ -56,6 +71,9 @@
     background: rgb(10,71,146);
     background: linear-gradient(87deg, $blueColorStrong, $blueColor 46%, $blueColor 100%); 
     padding: 60px;
+    @media (max-width:768px) {
+        padding: 15px;
+    }
     .title-doted, p{
         color: #ffffff;
         &::after, &::before{
@@ -64,10 +82,14 @@
     }
     .item-diferences{
         padding: 30px;
+        @media (max-width:768px) {
+            padding: 15px;
+        }
     }
     .text-item-diferences{
         font-size: 0.850rem;
-    word-break: break-all;
+        word-break: break-all;
+        
     }
     .text-desc{
         width: 75%;
@@ -77,6 +99,9 @@
         font-weight: 500;
         font-size: 1.2rem;
         text-align: center;
+        @media (max-width:768px) {
+            width: 100%;
+        }
     }
 }
 
@@ -95,7 +120,6 @@
     }
 }
 
-
 .duxSection-testimonial{
     .carousel{
         display: flex;
@@ -108,13 +132,14 @@
 
 }
 
-
-
 .duxSection-testimonials {
     height: 100vh;
     display: flex;
     justify-content: center;
     padding: 60px;
+    @media (max-width:768px) {
+        padding: 15px;
+    }
     .insights__list {
         list-style-type: none;
         padding: 0;
@@ -134,44 +159,69 @@
         align-items: center;
         justify-content: center;
         padding: 30px;
+        @media (max-width:768px) {
+            height: 75vh;
+            padding: 15px;
+            text-align: center;
+            width: 70vw;
+        }
         img{
             border-radius: 50%;
             border: solid 5px $blueColorStrong;
             width: 80%;
+            @media (max-width:768px) {
+                width: 65%;
+                margin-bottom: 10%;
+            }
         }
         span{
             color: $blueColorStrong;
             font-size: 1.750rem;
             text-align: initial;
             font-weight: 700;
+            @media (max-width:768px) {
+                font-size: 1.550rem;
+            }
         }
         p{
             color: $greyColor;
             font-size:1rem;
             text-align: initial;
+            @media (max-width:768px) {
+                text-align: center;
+                font-size: 1.250rem;
+            }
         }
       }
   }
 
 
   .duxSection-where {
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    padding: 60px;
+     padding: 30px 60px;
     .insights__list {
         list-style-type: none;
         padding: 0;
-        // height: 25vw;
-        // width: 100%;
         display: flex;
         justify-content: center;
+        
         li{
             padding: 15px;
             img{
                 border-radius: 50%;
-                border: solid 5px $blueColor;
+                border: solid 10px $blueColor;
                 width: 150px;
+                margin-bottom: 5%;
+            }
+            .where-item{
+                display: grid;
+                justify-content: center;
+                span{
+                    text-align: center;
+                    color: $blueColor;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    word-break: break-all;
+                };
             }
         }
         p{
@@ -182,28 +232,12 @@
             word-break: break-all;
         }
       }
+      .footer p{
+        text-transform: uppercase;
+        color: #00537f;
+        font-size: 12px;
+      }
     }
   
   
   
-  
-  
- 
-  
-  
-  #arrowLeft, #arrowRight {
-    width: 10vw;
-    height: 40vh;
-    position: fixed;
-    cursor: pointer;
-  }
-  
-  #arrowLeft {
-    left: 0;
-    top: 30vh;
-  }
-  
-  #arrowRight {
-    right: 0;
-    top: 30vh;
-  }
