@@ -52,6 +52,7 @@
 }
 
 .duxSection-budget{
+    padding: 60px 0;
     .btn-radius{
         border-radius: 50px;
         a{
@@ -120,7 +121,16 @@
     }
 }
 
-.duxSection-testimonial{
+
+.duxSection-testimonials {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    @media (max-width:768px) {
+        padding: 15px;
+        height:100vh;
+    }
     .carousel{
         display: flex;
         justify-content: center;
@@ -129,16 +139,8 @@
             border: solid 1px;
         }
     }
-
-}
-
-.duxSection-testimonials {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 60px;
-    @media (max-width:768px) {
-        padding: 15px;
+    .swiper{
+        padding: 30px;
     }
     .insights__list {
         list-style-type: none;
